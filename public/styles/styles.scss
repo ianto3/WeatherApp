@@ -1,0 +1,192 @@
+@import "config";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    // font-family: ;
+}
+
+body {
+    background-image: url("../photo-1466927593098-4d4aa7a2b2d8.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 90%;
+    width: 900px; // maybe in a media query?
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // padding: 3em;
+    padding: 40px;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    background-clip: padding-box;
+    box-shadow: 0 5px 80px rgba(0, 0, 0, 0.2);
+    // margin: 5%;
+    overflow: hidden;
+    z-index: 1;
+    // Maybe change the font coloring?
+    color: white;
+    text-shadow: 1px 3px 10px black;
+    text-align: center;
+
+    #geocoder{
+        text-shadow: none;
+    }
+}
+
+.unit-selection {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    span {
+        margin: 0 5px;
+    }
+
+    label {
+        display: inline-block;
+        color: rgb(163, 163, 163);
+    }
+      
+    input[type="radio"] {
+        display: none;
+    }
+      
+    input[type="radio"]:checked + label {
+        color: rgb(255, 255, 255);
+    }
+      
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.5rem;
+
+    & div {
+        width: 100%;
+    }
+
+    .search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (min-width: $breakpoint-tablet){
+        flex-direction: row;
+    }
+}
+
+// Current Data
+
+// Main info
+
+.current {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 2rem;
+
+    @media (min-width: $breakpoint-tablet){
+        flex-direction: row;
+    }
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .main-icon {
+        width: 100%;
+    }
+}
+
+
+// Details
+
+.detail-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 100%;
+
+    .detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 15px;
+        width: 150px;
+        height: 75px;
+    }
+}
+
+// Forecast Data
+
+.forecasts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    width: 100%;
+
+    .daily-forecast {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .forecast-max {
+        color: $max-color;
+    }
+
+    .forecast-min {
+        color: $min-color;
+    }
+
+    @media (min-width: $breakpoint-tablet){
+        flex-direction: row;
+        justify-content: space-between;
+        .daily-forecast {
+            flex-basis: 25%;
+        }
+    }
+}
+

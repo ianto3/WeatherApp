@@ -29,12 +29,19 @@
             <div class="location" data-location>Location</div>
             <div class="search" id="geocoder"></div>
         </header>
+        <div class="unit-selection">
+            <input type="radio" id="celsius" name="unit" checked>
+            <label for="celsius">C</label>
+            <span> | </span>
+            <input type="radio" id="fahrenheit" name="unit">
+            <label for="fahrenheit">F</label>
+        </div>
         <section class="current">
             <div class="main-content">
                 <div class="general-information">
-                    <div class="temperature" data-temperature>TBD <span>ºC</span></div>
+                    <div class="temperature" data-temperature>TBD</div>
+                    <img class="main-icon" src="" alt="">
                     <div class="status" data-description>Description</div>
-                    <div class="main-icon"></div>
                 </div>
             </div>
             <div class="detail-section">
