@@ -10,7 +10,12 @@
 
     <!-- MapBox GL -->
     <!-- Maybe make a conditional to only load in certain pages -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script> -->
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
+        type="text/css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 
     <title>Weather App</title>
@@ -18,24 +23,82 @@
 
 <body>
 
-    <script
-        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
-    <link rel="stylesheet"
-        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
-        type="text/css">
-
     <!-- <h1>ejs!</h1> -->
     <div class="container">
         <header class="header">
             <div class="location" data-location>Location</div>
             <div class="search" id="geocoder"></div>
         </header>
+        <section class="current">
+            <div class="main-content">
+                <div class="general-information">
+                    <div class="temperature" data-temperature>TBD <span>ºC</span></div>
+                    <div class="status" data-description>Description</div>
+                    <div class="main-icon"></div>
+                </div>
+            </div>
+            <div class="detail-section">
+                <div class="detail">
+                    <div class="title">Feels like</div>
+                    <div class="value" data-feels>TBD</div>
+                </div>
+                <div class="detail">
+                    <div class="title">Clouds</div>
+                    <div class="value" data-clouds>TBD</div>
+                </div>
+                <div class="detail">
+                    <div class="title">Humidity</div>
+                    <div class="value" data-humidity>TBD</div>
+                </div>
+                <div class="detail">
+                    <div class="title">Wind speed</div>
+                    <div class="value" data-speed>TBD</div>
+                </div>
+                <!-- <div class="detail">
+                    <div class="title">Precipitation</div>
+                    <div class="value">TBD</div>
+                </div> -->
+                <div class="detail">
+                    <div class="title">Sunrise</div>
+                    <div class="value" data-sunrise>TBD</div>
+                </div>
+                <div class="detail">
+                    <div class="title">Sunset</div>
+                    <div class="value" data-sunset>TBD</div>
+                </div>
+                <div class="detail">
+                    <div class="title">Wind degree</div>
+                    <div class="value" data-direction>TBD</div>
+                </div>
+            </div>
+        </section>
+        <section class="forecasts">
+            <!-- <div class="daily-forecast" data-daily-0>
+
+            </div>
+            <div class="daily-forecast" data-daily-0>
+
+            </div>
+            <div class="daily-forecast" data-daily-0>
+
+            </div>
+            <div class="daily-forecast" data-daily-0>
+
+            </div>
+            <div class="daily-forecast" data-daily-0>
+
+            </div>
+            <div class="daily-forecast" data-daily-0>
+
+            </div> -->
+        </section>
     </div>
 
     <script>
         const mapToken = '<%- process.env.MAPBOX_TOKEN %>';
     </script>
     <script src="/javascripts/dataRequest.js"></script>
+    <script src="/javascripts/dataFill.js"></script>
 
 </body>
 
