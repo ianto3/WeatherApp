@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="styles/styles.css">
 
     <!-- MapBox GL -->
-    <!-- Maybe make a conditional to only load in certain pages -->
-    <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script> -->
     <script
         src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
     <link rel="stylesheet"
@@ -18,17 +16,26 @@
         type="text/css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
     <title>Weather App</title>
 </head>
 
 <body>
 
-    <!-- <h1>ejs!</h1> -->
     <div class="container">
+
+        <!-- Header -->
         <header class="header">
             <div class="location" data-location>Location</div>
             <div class="search" id="geocoder"></div>
         </header>
+
+        <!-- Unit toggle -->
         <div class="unit-selection">
             <input type="radio" id="celsius" name="unit" checked>
             <label for="celsius">C</label>
@@ -36,6 +43,8 @@
             <input type="radio" id="fahrenheit" name="unit">
             <label for="fahrenheit">F</label>
         </div>
+
+        <!-- Current weather conditions -->
         <section class="current">
             <div class="main-content">
                 <div class="general-information">
@@ -90,9 +99,12 @@
                 </div>
             </div>
         </section>
+
+        <!-- Conditions for the next week -->
         <section class="forecasts">
             <!-- Filled by script -->
         </section>
+
     </div>
 
     <script>

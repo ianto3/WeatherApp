@@ -31,7 +31,6 @@ function updateUnits() {
 
     // Speed
     const allSpeedValues = document.querySelectorAll("[data-speed]");
-    console.dir(allSpeedValues)
     allSpeedValues.forEach(el => el.textContent = displaySpeed(el.textContent));
 
     const allSpeedUnits = document.querySelectorAll("[data-speed-unit]");

@@ -29,5 +29,21 @@ geocoder.on('result', function (e) {
         .then(data => {
             setValues(data, location);
         });
-    // geocoder.innerText = "";
 });
+
+// Initialize with Madrid weather info
+fetch("/weather", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    },
+    body: JSON.stringify({
+        longitude: -3.69194,
+        latitude: 40.41889
+    })
+})
+    .then(res => res.json())
+    .then(data => {
+        setValues(data, "Madrid");
+    });

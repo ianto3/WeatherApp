@@ -2,11 +2,11 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
-    // font-family: ;
+    font-family: "Ubuntu", sans-serif;
 }
 
 body {
-    background-image: url("../photo-1466927593098-4d4aa7a2b2d8.jpeg");
+    background-image: url("../images/photo-1470434158598-88e7ad324132.jpeg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,6 +91,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: inherit;
     }
 
     @media (min-width: $breakpoint-tablet){
@@ -176,10 +177,11 @@ body {
 
         .wind-direction {
             position: absolute;
-            top: 50%;
+            top: 40%;
             width: 50%;
-            height: 2px;
+            height: 15px;
             background-color: red;
+            clip-path: polygon(100% 30%, 0 50%, 100% 80%);
             transform-origin: right;
             transform: rotate(90deg)
         }
