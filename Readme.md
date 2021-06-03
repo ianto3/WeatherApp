@@ -13,12 +13,12 @@ I have also used the opportunity to explore SASS and use Autoprefixer.
 
 ## Technologies used
 
--Node.js
--Express framework
--Embedded javascript
--OpenWeather API
--Axios
--SASS and Autoprefixer
+- Node.js
+- Express framework
+- Embedded javascript
+- OpenWeather API
+- Axios
+- SASS and Autoprefixer
 
 
 ## Usage
