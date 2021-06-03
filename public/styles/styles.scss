@@ -7,6 +7,8 @@
 
 body {
     background-image: url("../images/photo-1470434158598-88e7ad324132.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,6 +129,10 @@ body {
 
     .main-icon {
         max-height: 200px;
+
+        @media (max-width: $breakpoint-mobile){
+            max-height: 150px;
+        }
     }
 }
 
@@ -153,6 +159,11 @@ body {
             margin-bottom: 10px;
             border-bottom: 1px solid rgba(255,255,255,0.5);
             box-shadow: 0 1px rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: $breakpoint-mobile){
+            font-size: 1rem;
+            width: 100px;
         }
     }
 
@@ -215,6 +226,10 @@ body {
 
     .forecast-min {
         color: $min-color;
+    }
+
+    @media (max-width: $breakpoint-mobile){
+        font-size: 1rem;
     }
 
     @media (min-width: $breakpoint-tablet){
