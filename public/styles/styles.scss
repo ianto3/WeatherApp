@@ -19,13 +19,12 @@ body {
 
 .container{
     max-width: 90%;
-    width: 900px; // maybe in a media query?
+    width: 900px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    // padding: 3em;
     padding: 40px;
     border-radius: 25px;
     background: rgba(0, 0, 0, 0.5);
@@ -33,10 +32,8 @@ body {
     border: 2px solid rgba(0, 0, 0, 0.1);
     background-clip: padding-box;
     box-shadow: 0 5px 80px rgba(0, 0, 0, 0.2);
-    // margin: 5%;
     overflow: hidden;
     z-index: 1;
-    // Maybe change the font coloring?
     color: white;
     text-shadow: 1px 3px 10px black;
     text-align: center;
