@@ -17,6 +17,7 @@ I have also used the opportunity to explore SASS and use Autoprefixer.
 - Express framework
 - Embedded javascript
 - OpenWeather API
+- Mapbox geocoder
 - Axios
 - SASS and Autoprefixer
 
